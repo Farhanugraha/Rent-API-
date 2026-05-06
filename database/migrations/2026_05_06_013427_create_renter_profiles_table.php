@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('full_name')->nullable();
             $table->char('nik', 16)->unique()->nullable();
             $table->string('license_no')->unique()->nullable();
+            $table->string('sim_image_url')->nullable();  
             $table->enum('verification_status', ['pending', 'verified', 'rejected'])->default('pending');
             $table->timestamps();
         });
